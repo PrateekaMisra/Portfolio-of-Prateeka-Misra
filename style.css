@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Roboto:wght@100&family=Sen:wght@400;700;800&display=swap");
+
+/* Commmon styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Jura", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* End Commom styles */
+/* Mouse Circle */
+.mouse-circle {
+  width: 6rem;
+  height: 6rem;
+  border: 0.1rem solid #c7a622;
+  animation: mouseCircleAnim 10s infinite linear;
+}
+.mouse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+  animation: mouseDotAnim 10s infinite linear;
+}
+
+.mouse-circle,
+.mouse-dot {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@keyframes mouseCircleAnim {
+  0% {
+    width: 6rem;
+    height: 6rem;
+  }
+  25% {
+    width: 8rem;
+    height: 8rem;
+  }
+  35% {
+    width: 4rem;
+    height: 4rem;
+  }
+  70% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@keyframes mouseDotAnim {
+  0% {
+    width: 1rem;
+    height: 1rem;
+  }
+  55% {
+    width: 1.3rem;
+    height: 1.3em;
+  }
+  100% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+/* End of Mouse Circle */
+
+/* Page BG */
+.page-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End Page BG */
+
+/* Section 1 */
+.section-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+/* Logo */
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+}
+/* End of Logo */
+/* Animated circle */
+.main-circle {
+  width: 55rem;
+  height: 55rem;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+}
+.main-circle img{
+  mix-blend-mode: color-dodge;
+  position: relative;
+  transition: left 2s,top 2s;
+  top:0;
+  left:0;
+}
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.circle {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  align-self: center;
+  justify-self: center;
+  opacity: 0.5;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 2s,top 2s;
+}
+.circle-1{
+  background: url(images/landing/circle-1-img.jpg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: 0.5rem dotted brown;
+}
+.circle-2{
+  background: url(images/landing/circle-2-img.jpg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: 0.5rem dashed white;
+}
+.circle-3{
+  background: url(images/landing/circle-3-img.jpg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: 1rem double lightgreen;
+}
+.circle-4{
+  background: url(images/landing/circle-4-img.jpg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: 0.7rem double red;
+}
+/* End of Animated circle */
+
+/* Featured Text */
+.featured-text{
+font-size: 2rem;
+color: whitesmoke;
+text-transform: uppercase;
+width: 0;
+word-break: break-word;
+line-height: 3.5;
+position: sticky;
+top: 0;
+
+}
+.featured-text-1{
+margin: 0 auto 0 10rem;
+}
+.featured-text-2{
+  margin: 0 10rem 0 auto;
+}
+/* End of Featured Text */
+
+/* End of Section 1 */
